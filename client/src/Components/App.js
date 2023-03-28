@@ -1,4 +1,8 @@
 import React, {useState, useEffect} from 'react'
+import {Route, Routes} from "react-router-dom"
+import Navbar from './Navbar'
+import LandingPage from './LandingPage'
+import Login from './Login'
 
 function App() {
 
@@ -16,7 +20,12 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <div className='App'>
+      <Navbar/>
+      <Routes>
+        <Route exact path ="/" element={<LandingPage/>}/>
+        <Route path = "/Login" element={<Login/>}/>
+      </Routes>
       {(typeof data.members === 'undefined') ? (
         <p>Loading...</p>
       ) : (
