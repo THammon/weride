@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar{
+  font-weight: 900;
+}
+
+.login {
+  text-align: right;
+}
+
+.navimage {
+  height: 40px;
+  width: 50px;
+  padding-right: 8px;
+}
